@@ -4,76 +4,82 @@ import { BiPhoneCall } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Container, Row, Col } from "react-bootstrap";
 const Footer = () => {
 	return (
 		<footer>
-			<h1>
-				<FaLayerGroup /> Fylo
-			</h1>
-			<nav className="footer-nav">
-				<ul>
-					<li>
-						<BiPhoneCall /> Phone: +1-543-123-4567
-					</li>
-					<li>
-						<MdEmail /> example@fylo.com
-					</li>
-				</ul>
-				<ul>
-					<li className="nav-item">
-						<Link to="/about-us" className="nav-link">
-							About Us
-						</Link>
-					</li>
-					<li>
-						<Link to="/jobs" className="nav-link">
-							Jobs
-						</Link>
-					</li>
-					<li>
-						<Link to="/press" className="nav-link">
-							Press
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/blog">Blog</Link>
-					</li>
-				</ul>
-				<ul>
-					<li className="nav-item">
-						<Link to="/contact-us" className="nav-link">
-							Contact Us
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/terms" className="nav-link">
-							Terms
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link to="/privacy" className="nav-link">
-							Privacy
-						</Link>
-					</li>
-				</ul>
-				<ul className="social-icons">
-					<li>
-						<Link to="/facebook">
-							<FaFacebookF />
-						</Link>
-					</li>
-					<li>
-						<Link to="/twitter">
-							<FaTwitter />
-						</Link>
-					</li>
-					<li>
-						<Link to="/instagram">
-							<FaInstagram />
-						</Link>
-					</li>
-				</ul>
-			</nav>
+			<Container fluid="md">
+				<h1>
+					<FaLayerGroup /> Fylo
+				</h1>
+				<Row className="footer">
+					<Col md className="small-container">
+						<div className="phone">
+							<BiPhoneCall className="icon" /> Phone:
+							+1-543-123-4567
+						</div>
+						<div className="email">
+							<MdEmail className="icon" /> example@fylo.com
+						</div>
+					</Col>
+					<Col md className="small-container">
+						<div>
+							<Link to="/about-us" className="nav-link">
+								About Us
+							</Link>
+						</div>
+						<div>
+							<Link to="/jobs" className="nav-link">
+								Jobs
+							</Link>
+						</div>
+						<div>
+							<Link to="/press" className="nav-link">
+								Press
+							</Link>
+						</div>
+						<div>
+							<Link to="/blog" className="nav-link">
+								Blog
+							</Link>
+						</div>
+					</Col>
+					<Col md className="small-container">
+						<div>
+							<Link to="/contact-us" className="nav-link">
+								Contact Us
+							</Link>
+						</div>
+						<div>
+							<Link to="/terms" className="nav-link">
+								Terms
+							</Link>
+						</div>
+						<div>
+							<Link to="/privacy" className="nav-link">
+								Privacy
+							</Link>
+						</div>
+					</Col>
+					<Col md className="social-icons">
+						<div>
+							<Link className="nav-link" to="/facebook">
+								<FaFacebookF />
+							</Link>
+						</div>
+						<div>
+							<Link className="nav-link" to="/twitter">
+								<FaTwitter />
+							</Link>
+						</div>
+						<div>
+							<Link className="nav-link" to="/instagram">
+								<FaInstagram />
+							</Link>
+						</div>
+					</Col>
+				</Row>
+			</Container>
 		</footer>
 	);
 };

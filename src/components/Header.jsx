@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 const Header = () => {
 	return (
-		<Container fluid="md">
+		<Container>
 			<header>
 				<nav>
 					<Link to="/">
