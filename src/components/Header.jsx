@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.svg";
 import { Container } from "react-bootstrap";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 const Header = () => {
 	return (
 		<Container>
